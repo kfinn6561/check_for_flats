@@ -4,12 +4,6 @@ from flats import load_flat_from_file
 from general_tools import pload
 import time
 
-
-
-
-
-
-
 class FlatChecker():
     def __init__(self) -> None:
         self.flats=[]
