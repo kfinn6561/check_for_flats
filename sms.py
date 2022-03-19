@@ -10,7 +10,7 @@ from threading import Thread
 
 
 def send_sms(message):
-    Thread(target=send_async_sms(message)).start()
+    Thread(target=send_async_sms, args=(message,)).start()
 
 def send_async_sms(message):
     try:
@@ -18,7 +18,7 @@ def send_async_sms(message):
         auth_token = os.environ['TWILIO_AUTH_TOKEN']
         client = Client(account_sid, auth_token)
         for to_number in SMS_TO_NUMBERS:
-            client.messages.create(body=message,from_='+447380281075',to=to_number)
+            client.messages.create(body=message,from_='+447360542923',to=to_number)
     except:
         print('Error sending sms')
     return 0
