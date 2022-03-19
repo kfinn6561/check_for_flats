@@ -23,8 +23,8 @@ def send_async_email(message):
 
 	return 0
 
-def send_email(message):
-	Thread(target=send_async_email(message)).start()
+def send_email(subject,body): #todo add subject to email
+	Thread(target=send_async_email(body)).start()
 
 
 # def send_email(message):
